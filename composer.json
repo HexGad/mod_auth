@@ -1,0 +1,27 @@
+{
+    "name": "HexGad/auth",
+    "description": "",
+    "authors": [
+        {
+            "name": "Ahmed Gad",
+            "email": "eng.ahmedmgad@gmail.com"
+        }
+    ],
+    "require": {
+        "nwidart/laravel-modules": "^10.0",
+        "HexGad/users": "*"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "HexGad\\Auth\\": ""
+        }
+    }
+}
