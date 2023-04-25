@@ -1,7 +1,7 @@
 @extends('auth::layouts.master')
 
 @section('content')
-    <form class="form w-100" novalidate="novalidate" action="{{url('password/reset')}}" method="post">
+    <form class="form w-100" novalidate="novalidate" action="{{url('/dashboard/password/reset')}}" method="post">
         @csrf
         <input type="hidden" name="token" value="{{request('token')}}">
         <!--begin::Heading-->

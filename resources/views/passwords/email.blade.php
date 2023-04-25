@@ -1,7 +1,7 @@
 @extends('auth::layouts.master')
 @section('title', 'Forget Password')
 @section('content')
-    <form class="form w-100" novalidate="novalidate" action="{{url('password/email')}}" method="post">
+    <form class="form w-100" novalidate="novalidate" action="{{url('/dashboard/password/email')}}" method="post">
         @csrf
         <!--begin::Heading-->
         <div class="text-center mb-10">
@@ -37,7 +37,7 @@
                 <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
                 <!--end::Indicator progress-->
             </button>
-            <a href="{{url('/login')}}" class="btn btn-light">Cancel</a>
+            <a href="{{url('/dashboard/login')}}" class="btn btn-light">Cancel</a>
         </div>
         <!--end::Actions-->
     </form>

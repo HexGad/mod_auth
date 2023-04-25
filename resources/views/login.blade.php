@@ -2,7 +2,7 @@
 
 @section('title', 'Login')
 @section('content')
-    <form class="form w-100" novalidate="novalidate" action="{{url('login')}}" method="post" autocomplete="on">
+    <form class="form w-100" novalidate="novalidate" action="{{route('dashboard.login')}}" method="post" autocomplete="on">
         @csrf
         <!--begin::Heading-->
         <div class="text-center mb-11">
@@ -43,7 +43,7 @@
         <div class="d-flex flex-stack flex-wrap gap-3 fs-base fw-semibold mb-8">
             <div></div>
             <!--begin::Link-->
-            <a href="{{url('/password/reset')}}" class="link-primary">Forgot Password ?</a>
+            <a href="{{url('/dashboard/password/reset')}}" class="link-primary">Forgot Password ?</a>
             <!--end::Link-->
         </div>
         <!--end::Wrapper-->

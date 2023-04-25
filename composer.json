@@ -8,15 +8,14 @@
         }
     ],
     "require": {
-        "nwidart/laravel-modules": "^10.0",
         "hexgad/users": "*"
     },
     "extra": {
         "laravel": {
-            "providers": [],
-            "aliases": {
-
-            }
+            "providers": [
+                "HexGad\\Auth\\Providers\\AuthServiceProvider"
+            ],
+            "aliases": {}
         }
     },
     "autoload": {
