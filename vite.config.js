@@ -6,7 +6,7 @@ import laravel from 'laravel-vite-plugin';
 
 export default defineConfig({
     build: {
-        outDir: '../../public/build-auth',
+        outDir: __dirname + '/dist/build-auth',
         emptyOutDir: true,
         manifest: true,
     },

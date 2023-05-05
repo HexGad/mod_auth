@@ -30,6 +30,8 @@ class AuthServiceProvider extends ServiceProvider
         $this->registerTranslations();
         $this->registerConfig();
         $this->registerViews();
+        $this->registerAssets();
+
         $this->loadMigrationsFrom(module_path($this->moduleName, 'database/migrations'));
     }
 
@@ -45,6 +47,19 @@ class AuthServiceProvider extends ServiceProvider
 
         $this->app->register(RouteServiceProvider::class);
     }
+
+    /**
+     * Register assets files.
+     *
+     * @return void
+     */
+    protected function registerAssets()
+    {
+        $this->publishes([
+            module_path($this->moduleName, 'dist/build-auth') => public_path(),
+        ], 'assets');
+    }
+
 
     /**
      * Register config.
