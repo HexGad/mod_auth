@@ -42,7 +42,7 @@ class AuthServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        if(!$this->app->providerIsLoaded(UsersServiceProvider::class))
+        if (!$this->app->providerIsLoaded(UsersServiceProvider::class))
             throw new ProviderNotLoadedException('Users');
 
         $this->app->register(RouteServiceProvider::class);
@@ -57,7 +57,7 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->publishes([
             module_path($this->moduleName, 'dist/build-auth') => public_path(),
-        ], 'assets');
+        ], 'modules-assets');
     }
 
 
